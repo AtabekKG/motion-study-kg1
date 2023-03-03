@@ -1,0 +1,135 @@
+@import "./../../style/variables";
+@import "./../../style/mixin";
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  z-index: 999;
+  background: $bg-light;
+  box-shadow: 5px 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 24px 0;
+  border-top: 9px solid $bg-main;
+
+  .header {
+    @include alignment;
+
+    &-right {
+      @include alignment;
+
+      &_nav {
+        @include d-f_al-c;
+        gap: 56px;
+
+        &-item {
+          padding-top: 8px;
+          @include d-f_fd-c;
+          align-items: center;
+          row-gap: 2px;
+
+          &:hover {
+            .nav-circle {
+              opacity: 1;
+            }
+          }
+          span {
+            font-weight: 500;
+            font-size: $text-14;
+            text-transform: capitalize;
+            color: #1A1A1A;
+          }
+          .nav-circle {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #FF6A6A;
+            opacity: 0;
+            transition: all .4s ease-in-out;
+
+          }
+        }
+      }
+      &_search {
+        margin: 0 59px 0 83px;
+        position: relative;
+
+        &-icon {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          color: #bbbbbb;
+          font-size: 26px;
+        }
+        &-input {
+          background: rgba(255, 255, 255, 0.95);
+          border: 0.8px solid rgba(86, 9, 187, 0.2);
+          border-radius: 8px;
+          padding: 14px 0 14px 38px;
+          transition: all .2s linear;
+
+          &:hover {
+            border-radius: 8px;
+            border: 0.8px solid #5609BB;
+            outline: 5px solid rgba(192, 143, 255, 0.3);
+          }
+        }
+        #search-wrap {
+          .search-content {
+            @include d-f_fd-c;
+            row-gap: 7px;
+            background: #FFFFFF;
+            border-radius: 8px;
+            width: 219px;
+            padding: 15px 0 15px 38px;
+            position: absolute;
+            top: 50px;
+
+            &_item {
+              font-weight: 500;
+              font-size: 16px;
+              color: #212121;
+            }
+          }
+        }
+      }
+      &_langs {
+        select {
+          font-weight: 500;
+          line-height: 17px;
+          text-align: center;
+          text-transform: capitalize;
+          color: $text-dark;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #header {
+    .header {
+      &-right {
+        width: 78%;
+
+        &_search {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    .header {
+      &-right {
+        display: none;
+      }
+    }
+  }
+
+}

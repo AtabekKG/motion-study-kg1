@@ -1,0 +1,71 @@
+@import "./src/style/variables";
+@import "./src/style/mixin";
+
+#footer {
+  background: #121212;
+  padding: 75px 0 35px 0;
+
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    grid-template-areas:
+            "logo navbar icons"
+            "line line line"
+            "copyright copyright copyright";
+
+    &-nav {
+      @include d-f_al-c;
+      grid-area: navbar;
+      column-gap: 65px;
+      justify-content: center;
+
+      &_item {
+        font-weight: 500;
+        font-size: $text-16;
+        text-transform: capitalize;
+        color: $text-white;
+      }
+    }
+    &-icons {
+      @include d-f_al-c;
+      grid-area: icons;
+      column-gap: 30px;
+      justify-content: end;
+
+      &_icon {
+        color: #FFFFFF;
+        font-size: 30px;
+      }
+    }
+    &-line {
+      grid-area: line;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      margin: 38px 0 18px 0;
+    }
+    &-copyright {
+      grid-area: copyright;
+      text-align: center;
+
+      span {
+        font-weight: 500;
+        font-size: $text-14;
+        text-transform: capitalize;
+        color: $text-white;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #footer {
+    .footer {
+      &-nav {
+        display: none;
+      }
+    }
+  }
+
+}

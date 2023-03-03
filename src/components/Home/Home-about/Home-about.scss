@@ -1,0 +1,260 @@
+@import "./../../../style/variables";
+@import "./../../../style/mixin";
+
+#about-us {
+  padding-bottom: 175px;
+
+  .about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 45px;
+
+    &_desc {
+
+      &-title {
+        font-weight: 500;
+        font-size: $h1-48;
+        line-height: 58px;
+        text-transform: capitalize;
+        color: #212121;
+      }
+      p {
+        font-weight: 400;
+        font-size: $text-18;
+        line-height: 33px;
+        color: #010D39;
+        margin: 30px 0 50px 0;
+      }
+      &-bg {
+        width: 97%;
+        height: auto;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          transition: all .5s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    &_blocks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 35px;
+      row-gap: 44px;
+
+      &-block {
+        padding: 47px 18px 55px 26px;
+        background: $bg-light;
+        box-shadow: 5px 8px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+
+        &_bg {
+          width: 46px;
+          height: 46px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        h4 {
+          font-weight: 500;
+          text-transform: capitalize;
+          color: #010D39;
+          margin: 25px 0 26px 0;
+        }
+        p {
+          font-weight: 400;
+          font-size: $text-14;
+          line-height: 19px;
+          text-transform: capitalize;
+          width: 228px;
+          color: #001254;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  #about-us {
+    .about-us {
+      grid-template-columns: 4fr 1fr;
+      column-gap: 36px;
+
+      &_blocks {
+        grid-template-columns: .6fr .6fr;
+        column-gap: 28px;
+        row-gap: 26px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 1024px) {
+  #about-us {
+    padding-bottom: 124px;
+
+    .about-us {
+      grid-template-columns: 1fr;
+
+      &_desc {
+        &-title {
+          line-height: normal;
+          font-size: $h1-768;
+        }
+        p {
+          margin: 20px 0 40px 0
+        }
+        &-bg {
+          width: 100%;
+        }
+      }
+      &_blocks {
+        margin-top: 48px;
+
+        &-block {
+          h4 {
+            font-size: 22px;
+            margin: 16px 0;
+          }
+          p {
+            font-size: 18px;
+            line-height: 25px;
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  #about-us {
+    padding-bottom: 124px;
+
+    .about-us {
+      grid-template-columns: 1fr;
+
+      &_desc {
+        &-title {
+          line-height: normal;
+          font-size: $h1-768;
+        }
+        p {
+          margin: 20px 0 40px 0
+        }
+        &-bg {
+          width: 100%;
+        }
+      }
+      &_blocks {
+        margin-top: 48px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 620px) {
+  #about-us {
+    .about-us {
+      display: flex;
+      flex-direction: column;
+
+      &_blocks {
+        &-block {
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 576px) {
+  #about-us {
+    .about-us {
+      &_blocks {
+        grid-template-columns: 1fr;
+
+        &-block {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          column-gap: 20px;
+
+          &_bg {
+            width: 56px;
+            height: 56px;
+          }
+          h4 {
+            width: auto;
+            font-size: 28px;
+          }
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 451px) {
+  #about-us {
+    .about-us {
+      &_desc {
+        &-title {
+          font-size: 28px;
+        }
+        p {
+          font-size: 16px;
+        }
+        &-bg {
+          height: auto;
+
+        }
+      }
+      &_blocks {
+        &-block {
+          padding: 35px 26px 35px 20px;
+          h4 {
+            font-size: 28px;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #about-us {
+    .about-us {
+      &_blocks {
+        &-block {
+          h4 {
+            font-size: 22px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+}
