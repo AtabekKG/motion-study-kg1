@@ -14,10 +14,12 @@ import Ielts from "./components/Home/Home-exams/Ielts/Ielts";
 import OtherExams from "./components/Home/Home-exams/Other-exams/Other-exams";
 
 function App() {
+
+
   return (
     <div className="App">
         <Routes>
-            <Route path={"/Home"} element={<Home/>}/>
+            <Route path={"/"} element={<Home/>}/>
             <Route path={"/Discover-more"} element={<DiscoverMore/>}/>
             <Route path={"/Aptis"} element={<Aptis/>}/>
             <Route path={"/Ielts"} element={<Ielts/>}/>

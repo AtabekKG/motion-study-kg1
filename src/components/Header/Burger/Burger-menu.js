@@ -27,7 +27,7 @@ const BurgerMenu = () => {
                             <div className="burger-content_close-second"></div>
                         </div>
                         <nav className="burger-content_nav">
-                            <NavLink className="burger-content_nav-item" to={"/Home"} onClick={() => setIsBurger(false)}>
+                            <NavLink className="burger-content_nav-item" to={"/"} onClick={() => setIsBurger(false)}>
                                 Home
                             </NavLink>
                             <NavLink className="burger-content_nav-item" to={"/About"} onClick={() => setIsBurger(false)}>

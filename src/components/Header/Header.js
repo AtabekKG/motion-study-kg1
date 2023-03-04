@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import OutsideClickHandler from 'react-outside-click-handler';
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import "./Header.scss";
 import Logo from "./../../image/logo.svg";
 import {CiSearch} from "react-icons/ci";
@@ -15,13 +15,13 @@ const Header = () => {
                 <div className="container">
                     <div className="header">
                         <div className="header-logo">
-                            <NavLink to={"/Home"}>
-                                <img src={Logo}/>
+                            <NavLink to={"/"}>
+                                <img src={Logo} alt={'#'}/>
                             </NavLink>
                         </div>
                         <div className="header-right">
                             <nav className="header-right_nav">
-                                <NavLink className="header-right_nav-item" to={"/Home"}>
+                                <NavLink className="header-right_nav-item" to={"/"}>
                                     <span>Home</span>
                                     <div className="nav-circle"></div>
                                 </NavLink>
@@ -33,10 +33,10 @@ const Header = () => {
                                     <span>Study Abroad</span>
                                     <div className="nav-circle"></div>
                                 </NavLink>
-                                <NavLink className="header-right_nav-item">
+                                <Link to={'/'} className="header-right_nav-item">
                                     <span>Contacts</span>
                                     <div className="nav-circle"></div>
-                                </NavLink>
+                                </Link>
                             </nav>
                             <NavLink to={"/America"} onClick={() => setSearchContent(true)}
                                      className="header-right_search">
