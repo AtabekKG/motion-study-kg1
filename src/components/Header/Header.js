@@ -41,18 +41,21 @@ const Header = () => {
                             <NavLink to={"/America"} onClick={() => setSearchContent(true)}
                                      className="header-right_search">
                                 <CiSearch className="header-right_search-icon"/>
-                                <input className="header-right_search-input" type="text" placeholder="Поиск..."/>
+                                <input className="header-right_search-input" style={{
+                                    outline: searchContent ? 'none' : '',
+                                    border: searchContent ? 'none' : '',
+                                }} type="text" placeholder="Поиск..."/>
                                 {searchContent && (
                                     <OutsideClickHandler
                                         onOutsideClick={() => setSearchContent(false)}
                                     >
                                         <div id="search-wrap">
                                             <div className="search-content">
-                                                <NavLink className="search-content_item">United States</NavLink>
-                                                <NavLink className="search-content_item">Korea</NavLink>
-                                                <NavLink className="search-content_item">Australia</NavLink>
-                                                <NavLink className="search-content_item">Malaysia</NavLink>
-                                                <NavLink className="search-content_item">Germany</NavLink>
+                                                <NavLink to={'#'} className="search-content_item">United States</NavLink>
+                                                <NavLink to={'#'} className="search-content_item">Korea</NavLink>
+                                                <NavLink to={'#'} className="search-content_item">Australia</NavLink>
+                                                <NavLink to={'#'} className="search-content_item">Malaysia</NavLink>
+                                                <NavLink to={'#'} className="search-content_item">Germany</NavLink>
                                             </div>
                                         </div>
                                     </OutsideClickHandler>
