@@ -2,6 +2,7 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 import "./Study.scss";
 import studyImg from "./../../image/study-hero.png";
+import {Scroll} from "../../Scroll/Scroll";
 
 const Study = () => {
     return (
@@ -36,7 +37,7 @@ const Study = () => {
                                 <li>Summer camps</li>
                                 <li>Guardianship companies</li>
                             </ul>
-                            <NavLink to={"/Explore"} className="study-group_desc-btn">Explore</NavLink>
+                            <NavLink to={"/Explore"} onClick={Scroll} className="study-group_desc-btn">Explore</NavLink>
                         </div>
                     </div>
                 </div>
