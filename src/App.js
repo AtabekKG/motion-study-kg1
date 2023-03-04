@@ -13,9 +13,8 @@ import Aptis from "./components/Home/Home-exams/Aptis/Aptis";
 import Ielts from "./components/Home/Home-exams/Ielts/Ielts";
 import OtherExams from "./components/Home/Home-exams/Other-exams/Other-exams";
 
+
 function App() {
-
-
   return (
     <div className="App">
         <Routes>

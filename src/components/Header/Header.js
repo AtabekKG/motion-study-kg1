@@ -5,6 +5,7 @@ import "./Header.scss";
 import Logo from "./../../image/logo.svg";
 import {CiSearch} from "react-icons/ci";
 import BurgerMenu from "./Burger/Burger-menu.js";
+import {Scroll} from "../../Scroll/Scroll";
 
 const Header = () => {
     const [searchContent, setSearchContent] = useState(false);
@@ -25,15 +26,15 @@ const Header = () => {
                                     <span>Home</span>
                                     <div className="nav-circle"></div>
                                 </NavLink>
-                                <NavLink className="header-right_nav-item" to={"/About"}>
+                                <NavLink onClick={Scroll} className="header-right_nav-item" to={"/About"}>
                                     <span>About Us</span>
                                     <div className="nav-circle"></div>
                                 </NavLink>
-                                <NavLink className="header-right_nav-item" to={"/Study"}>
+                                <NavLink onClick={Scroll} className="header-right_nav-item" to={"/Study"}>
                                     <span>Study Abroad</span>
                                     <div className="nav-circle"></div>
                                 </NavLink>
-                                <Link to={'/'} className="header-right_nav-item">
+                                <Link onClick={Scroll} to={'/'} className="header-right_nav-item">
                                     <span>Contacts</span>
                                     <div className="nav-circle"></div>
                                 </Link>

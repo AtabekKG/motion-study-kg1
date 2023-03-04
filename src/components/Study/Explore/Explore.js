@@ -15,6 +15,7 @@ import cyprusImg from "./../../../image/study-cyprus.png";
 import chinaImg from "./../../../image/study-china.png";
 import latviaImg from "./../../../image/study-latvia.png";
 import Tabs from "../Tabs/Tabs";
+import {Scroll} from "../../../Scroll/Scroll";
 
 const Explore = () => {
     return (
@@ -25,7 +26,7 @@ const Explore = () => {
                     <Tabs/>
                     <div className="explore-blocks">
                         <div className="explore-blocks_block">
-                            <NavLink to={"/America"} className="explore-blocks_block-link">
+                            <NavLink to={"/America"} onClick={Scroll} className="explore-blocks_block-link">
                                 <div className="explore-blocks_block-bg">
                                     <img src={americaImg} alt=""/>
                                 </div>
@@ -34,7 +35,7 @@ const Explore = () => {
                             </NavLink>
                         </div>
                         <div className="explore-blocks_block">
-                            <NavLink className="explore-blocks_block-link">
+                            <NavLink onClick={Scroll} className="explore-blocks_block-link">
                                 <div className="explore-blocks_block-bg">
                                     <img src={britainImg} alt=""/>
                                 </div>
@@ -43,7 +44,7 @@ const Explore = () => {
                             </NavLink>
                         </div>
                         <div className="explore-blocks_block">
-                           <NavLink className="explore-blocks_block-link">
+                           <NavLink onClick={Scroll} className="explore-blocks_block-link">
                                <div className="explore-blocks_block-bg">
                                    <img src={austriaImg} alt=""/>
                                </div>
@@ -52,7 +53,7 @@ const Explore = () => {
                            </NavLink>
                         </div>
                         <div className="explore-blocks_block">
-                            <NavLink className="explore-blocks_block-link">
+                            <NavLink onClick={Scroll} className="explore-blocks_block-link">
                                 <div className="explore-blocks_block-bg">
                                     <img src={germanyImg} alt=""/>
                                 </div>
@@ -61,7 +62,7 @@ const Explore = () => {
                             </NavLink>
                         </div>
                         <div className="explore-blocks_block">
-                            <NavLink className="explore-blocks_block-link">
+                            <NavLink onClick={Scroll} className="explore-blocks_block-link">
                                 <div className="explore-blocks_block-bg">
                                     <img src={hollandImg} alt=""/>
                                 </div>
@@ -70,7 +71,7 @@ const Explore = () => {
                             </NavLink>
                         </div>
                         <div className="explore-blocks_block">
-                           <NavLink className="explore-blocks_block-link">
+                           <NavLink onClick={Scroll} className="explore-blocks_block-link">
                                <div className="explore-blocks_block-bg">
                                    <img src={irelandImg} alt=""/>
                                </div>
@@ -79,7 +80,7 @@ const Explore = () => {
                            </NavLink>
                         </div>
                         <div className="explore-blocks_block">
-                            <NavLink className="explore-blocks_block-link">
+                            <NavLink onClick={Scroll} className="explore-blocks_block-link">
                                 <div className="explore-blocks_block-bg">
                                     <img src={spainImg} alt=""/>
                                 </div>
@@ -88,7 +89,7 @@ const Explore = () => {
                             </NavLink>
                         </div>
                         <div className="explore-blocks_block">
-                            <NavLink className="explore-blocks_block-link">
+                            <NavLink onClick={Scroll} className="explore-blocks_block-link">
                                 <div className="explore-blocks_block-bg">
                                     <img src={italyImg} alt=""/>
                                 </div>
@@ -97,7 +98,7 @@ const Explore = () => {
                             </NavLink>
                         </div>
                         <div className="explore-blocks_block">
-                            <NavLink className="explore-blocks_block-link">
+                            <NavLink onClick={Scroll} className="explore-blocks_block-link">
                                 <div className="explore-blocks_block-bg">
                                     <img src={canadaImg} alt=""/>
                                 </div>
@@ -115,7 +116,7 @@ const Explore = () => {
                             </NavLink>
                         </div>
                         <div className="explore-blocks_block">
-                            <NavLink className="explore-blocks_block-link">
+                            <NavLink onClick={Scroll} className="explore-blocks_block-link">
                                 <div className="explore-blocks_block-bg">
                                     <img src={chinaImg} alt=""/>
                                 </div>
@@ -124,7 +125,7 @@ const Explore = () => {
                             </NavLink>
                         </div>
                         <div className="explore-blocks_block">
-                            <NavLink className="explore-blocks_block-link">
+                            <NavLink onClick={Scroll} className="explore-blocks_block-link">
                                 <div className="explore-blocks_block-bg">
                                     <img src={latviaImg} alt=""/>
                                 </div>
