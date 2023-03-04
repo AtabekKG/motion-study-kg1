@@ -28,16 +28,19 @@ const BurgerMenu = () => {
                         </div>
                         <nav className="burger-content_nav">
                             <NavLink className="burger-content_nav-item" to={"/"} onClick={() => setIsBurger(false)}>
-                                Home
+                               <span> Home</span>
                             </NavLink>
                             <NavLink className="burger-content_nav-item" to={"/About"} onClick={() => setIsBurger(false)}>
-                                About Us
+                               <span>About Us</span>
+                                <div className="nav-circle"></div>
                             </NavLink>
                             <NavLink className="burger-content_nav-item" to={"/Study"} onClick={() => setIsBurger(false)}>
-                                Study Abroad
+                               <span>Study Abroad</span>
+                                <div className="nav-circle"></div>
                             </NavLink>
-                            <NavLink className="burger-content_nav-item" onClick={() => setIsBurger(false)}>
-                                Contacts
+                            <NavLink to={'/'} className="burger-content_nav-item" onClick={() => setIsBurger(false)}>
+                               <span>Contacts</span>
+                                <div className="nav-circle"></div>
                             </NavLink>
                         </nav>
                         <div className="burger-content_lang-block">
