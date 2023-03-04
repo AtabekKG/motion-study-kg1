@@ -14,10 +14,10 @@ const Tabs = () => {
                 </label>
                 <div className="explore-tabs_tab-wrap">
                     <div className="explore-tabs_tab-wrap_block">
-                        <NavLink>Secondary Education</NavLink>
-                        <NavLink>Higher Education</NavLink>
-                        <NavLink>Language courses for youth</NavLink>
-                        <NavLink>Children's language camps</NavLink>
+                        <p>Secondary Education</p>
+                        <p>Higher Education</p>
+                        <p>Language courses for youth</p>
+                        <p>Children's language camps</p>
                     </div>
                 </div>
             </div>
@@ -29,11 +29,11 @@ const Tabs = () => {
                 </label>
                 <div className="explore-tabs_tab-wrap">
                     <div className="explore-tabs_tab-wrap_block">
-                        <NavLink>IT Technologies</NavLink>
-                        <NavLink>Bisiness</NavLink>
-                        <NavLink>Medicine</NavLink>
-                        <NavLink>International Relationships</NavLink>
-                        <NavLink>Tourism</NavLink>
+                        <p>IT Technologies</p>
+                        <p>Bisiness</p>
+                        <p>Medicine</p>
+                        <p>International Relationships</p>
+                        <p>Tourism</p>
                     </div>
                 </div>
             </div>
@@ -45,10 +45,10 @@ const Tabs = () => {
                 </label>
                 <div className="explore-tabs_tab-wrap">
                     <div className="explore-tabs_tab-wrap_block">
-                        <NavLink>America</NavLink>
-                        <NavLink>Germany</NavLink>
-                        <NavLink>Indonesia</NavLink>
-                        <NavLink>South Korea</NavLink>
+                        <p>America</p>
+                        <p>Germany</p>
+                        <p>Indonesia</p>
+                        <p>South Korea</p>
                     </div>
                 </div>
             </div>
