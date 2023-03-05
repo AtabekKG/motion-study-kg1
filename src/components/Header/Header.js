@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import OutsideClickHandler from 'react-outside-click-handler';
 import {Link, NavLink} from "react-router-dom";
 import "./Header.scss";
@@ -9,10 +9,21 @@ import {Scroll} from "../../Scroll/Scroll";
 
 const Header = () => {
     const [searchContent, setSearchContent] = useState(false);
+    const [load, setLoad] = useState(true)
+
+    useEffect(() => {
+        setLoad(true)
+
+        setTimeout(() => {
+            setLoad(false)
+        }, 3100)
+    }, [])
 
     return (
         <>
-            <header id="header">
+            <header id="header" style={{
+                display: load ? 'none' : 'block'
+            }}>
                 <div className="container">
                     <div className="header">
                         <div className="header-logo">
