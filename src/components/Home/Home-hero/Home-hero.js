@@ -37,7 +37,7 @@ const HomeHero = () => {
                         )}
                     </NavLink>
                     <div className="hero-desc">
-                        <h3 className="hero-desc_subtitle">EXPLORE THE WORLD</h3>
+                        <h3 className="hero-desc_subtitle">Explore the world</h3>
                         <h1 className="hero-desc_title">Study abroad with our help</h1>
                         <p>
                             Study at at the world's top universities and expand your horizons.

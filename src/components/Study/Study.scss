@@ -81,6 +81,7 @@
             }
           }
         }
+
         &-btn {
           display: inline-block;
           padding: 20px 72px;
@@ -307,6 +308,9 @@
               line-height: 28px;
             }
           }
+          .btn-study{
+            text-align: center;
+          }
           &-btn {
             padding: 20px 106px;
           }
@@ -316,3 +320,4 @@
   }
 
 }
+
