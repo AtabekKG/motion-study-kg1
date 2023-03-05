@@ -37,7 +37,9 @@ const Study = () => {
                                 <li>Summer camps</li>
                                 <li>Guardianship companies</li>
                             </ul>
-                            <NavLink to={"/Explore"} onClick={Scroll} className="study-group_desc-btn">Explore</NavLink>
+                            <div className='btn-study'>
+                                <NavLink to={"/Explore"} onClick={Scroll} className="study-group_desc-btn">Explore</NavLink>
+                            </div>
                         </div>
                     </div>
                 </div>
