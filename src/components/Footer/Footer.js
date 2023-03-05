@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Footer.scss";
 import footerLogo from "./../../image/footer-logo.svg";
 import {NavLink} from "react-router-dom";
@@ -6,8 +6,21 @@ import {BsTelegram, BsYoutube} from "react-icons/bs";
 import {AiFillInstagram} from "react-icons/ai";
 
 const Footer = () => {
+
+    const [load, setLoad] = useState(true)
+
+    useEffect(() => {
+        setLoad(true)
+
+        setTimeout(() => {
+            setLoad(false)
+        }, 3100)
+    }, [])
+
     return (
-        <footer id="footer">
+        <footer id="footer" style={{
+            display: load ? 'none' : 'block'
+        }}>
             <div className="container">
                 <div className="footer">
                     <div className="footer-logo">

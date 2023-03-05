@@ -12,31 +12,49 @@ import DiscoverMore from "./components/Home/Home-exams/Discover-more/Discover-mo
 import Aptis from "./components/Home/Home-exams/Aptis/Aptis";
 import Ielts from "./components/Home/Home-exams/Ielts/Ielts";
 import OtherExams from "./components/Home/Home-exams/Other-exams/Other-exams";
+import Loading from "./loading";
+import {useEffect, useState} from "react";
 
 
 function App() {
-  return (
-    <div className="App">
-        <Routes>
-            <Route path={"/"} element={<Home/>}/>
-            <Route path={"/Home"} element={<Home/>}/>
-            <Route path={"/Discover-more"} element={<DiscoverMore/>}/>
-            <Route path={"/Aptis"} element={<Aptis/>}/>
-            <Route path={"/Ielts"} element={<Ielts/>}/>
-            <Route path={"/Other-exams"} element={<OtherExams/>}/>
 
-            <Route path={"/About"} element={<About/>}/>
+    const [load, setLoad] = useState(true)
 
-            <Route path={"/Study"} element={<Study/>}/>
-            <Route path={"/Explore"} element={<Explore/>}/>
-            <Route path={"/America"} element={<America/>}/>
-            <Route path={"/Solbrige"} element={<Solbrige/>}/>
+    useEffect(() => {
+        setLoad(true)
 
-            <Route path={"/Contact"} element={<Contact/>}/>
-            <Route path={"/Search-input"} element={<SearchInput/>}/>
-        </Routes>
-    </div>
-  );
+        setTimeout(() => {
+            setLoad(false)
+        }, 3100)
+    }, [])
+
+    return (
+        <>
+
+            <Loading load={load}/>
+
+
+            <div className="App" style={{
+                display: load ? 'none' : 'block'
+            }}>
+                <Routes>
+                    <Route path={"/"} element={<Home/>}/>
+                    <Route path={"/Home"} element={<Home/>}/>
+                    <Route path={"/Discover-more"} element={<DiscoverMore/>}/>
+                    <Route path={"/Aptis"} element={<Aptis/>}/>
+                    <Route path={"/Ielts"} element={<Ielts/>}/>
+                    <Route path={"/Other-exams"} element={<OtherExams/>}/>
+                    <Route path={"/About"} element={<About/>}/>
+                    <Route path={"/Study"} element={<Study/>}/>
+                    <Route path={"/Explore"} element={<Explore/>}/>
+                    <Route path={"/America"} element={<America/>}/>
+                    <Route path={"/Solbrige"} element={<Solbrige/>}/>
+                    <Route path={"/Contact"} element={<Contact/>}/>
+                    <Route path={"/Search-input"} element={<SearchInput/>}/>
+                </Routes>
+            </div>
+        </>
+    );
 }
 
 export default App;

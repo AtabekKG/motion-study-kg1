@@ -1,0 +1,24 @@
+#load{
+  position: absolute;
+  top: 47%;
+  left: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .load{
+   h1{
+     display: flex;
+     align-items: center;
+     span{
+       font-family: 'SF Pro Display', sans-serif;
+       font-style: normal;
+       font-weight: 400;
+       font-size: 78px;
+       line-height: 93px;
+       text-align: center;
+       text-transform: capitalize;
+       color: #5609BB;
+     }
+   }
+  }
+}
