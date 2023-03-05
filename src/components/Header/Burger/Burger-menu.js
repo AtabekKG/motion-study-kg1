@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {NavLink} from "react-router-dom";
 import './Burger.scss';
 import {FaTelegramPlane} from "react-icons/fa";
@@ -8,9 +8,20 @@ import {MdEmail} from "react-icons/md";
 
 const BurgerMenu = () => {
     const [isBurger, setIsBurger] = useState(false);
+    const [load, setLoad] = useState(true)
+
+    useEffect(() => {
+        setLoad(true)
+
+        setTimeout(() => {
+            setLoad(false)
+        }, 3100)
+    }, [])
 
     return (
-        <div id="burger">
+        <div id="burger" style={{
+            display: load ? 'none' : 'block'
+        }}>
             <div className="container">
                 <div className="burger">
                     <div onClick={() => setIsBurger(true) } className="burger-menu">
